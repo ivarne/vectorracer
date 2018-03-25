@@ -4,16 +4,11 @@ import PropTypes from "prop-types";
 //import './NextPos.css'
 
 class NextPos extends PureComponent {
-  static propTypes = {
-    updatePos: PropTypes.func.isRequired
-  };
-  handleClick = e => {
-    this.props.updatePos(e.target.cx.baseVal.value, e.target.cy.baseVal.value);
-  };
+  static propTypes = {};
+
   render() {
     const { x, delta_x, y, delta_y } = this.props;
     const common = {
-      onClick: this.handleClick,
       r: 0.45
     };
     return (
